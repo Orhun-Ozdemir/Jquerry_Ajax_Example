@@ -1,12 +1,14 @@
 <?php
 
-$data=[];
-
-$ad=$_POST["ad"];
-$soyad=$_POST["soyad"];
+$deger=$_POST["nickname"];
+$deger_2=$_POST["name"];
 
 
-$data["ok"]="hahahahahahahahha";
+
+
+
+
+$data["ok"]=$deger;
 
 echo json_encode($data);
 ?>
