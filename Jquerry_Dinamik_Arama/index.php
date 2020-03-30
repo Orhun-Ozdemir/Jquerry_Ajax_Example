@@ -19,16 +19,37 @@
 
 </div>
 
+<div class="deneme">
+	
+</div>
+
 </center>
 
 <script type="text/javascript">
 
+$(".sonuc").hide();
 $(function(){
+	
+	var z=0;
+for ( var i = 0 ; i <= 5; i++) 
+{
+	$(".deneme").show().html("buraya kadar");
+	
+
+}
+
+
+
 
 
 $(".search").on("keyup",function(){
 
    var x= $(".search").val();
+   if(x==""){
+
+    $(".sonuc").hide();
+
+   }
 
 
 $.ajax({
@@ -36,11 +57,12 @@ $.ajax({
 data:{"search":x},
 url:"db.php",
 type:"post",
+datatype:"json",
 success:function(e){
 
 
-
-alert(e);
+//console.log(e);
+$(".sonuc").show().html(e);
 
 }
 
